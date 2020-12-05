@@ -12,7 +12,32 @@
         </p>
         </div>
 
-    <a href="addMaker" class="btn btn-light">Add Menu</a>
+    <a href="addMaker" class="btn btn-light mb-3">Add Menu</a>
+
+    <table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Price</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for t in data %}
+    <tr>
+      <td>{{ t.name }}</td>
+      <td>{{ t.quantity }}</td>
+      <td>{{ t.price }}</td>
+      <td>
+          <a href="editMenu/{{t.menuId}}" class="btn-sm btn-success">Edit</a>
+          <a href="deleteMenu/{{t.menuId}}" class="btn-sm btn-danger">Delete</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
     </div>
 {% endblock body %}
 

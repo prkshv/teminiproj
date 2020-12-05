@@ -19,5 +19,7 @@ from . import views
 
 urlpatterns = [
     path('', views.makerDash, name="makerDash"),
-    path('addMaker', views.addMaker, name="addMaker")
+    path('addMaker', views.addMaker, name="addMaker"),
+    path('editMenu/<int:menuId>', views.editMenuData, name="editMenuData"),
+    path('deleteMenu/<int:menuId>', views.deleteMenuData, name="deleteMenuData")
 ]
