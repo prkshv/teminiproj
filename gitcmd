@@ -1,0 +1,7 @@
+git config --global user.email "valaviprakash00@gmail.com"
+git config --global user.name "prkshv"
+git init
+git add .
+git commit -m "first"
+git remote add origin https://github.com/prkshv/teminiproj
+git push -u origin master
